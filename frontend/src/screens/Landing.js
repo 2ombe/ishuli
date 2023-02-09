@@ -1,29 +1,30 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
-import Header from '../components/Header'
-import Sidebar from '../components/Sidebar'
-import Main from '../components/Main'
-import './Landing.css'
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import Main from "../components/Main";
+import "./Landing.css";
 
 const Landing = ({ history }) => {
-  const [sidebarOpen, setsidebarOpen] = useState(false)
-  const userLogin = useSelector((state) => state.userLogin)
-  const { userCred } = userLogin
+  const [sidebarOpen, setsidebarOpen] = useState(false);
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userCred } = userLogin;
   const openSidebar = () => {
-    setsidebarOpen(true)
-  }
+    setsidebarOpen(true);
+  };
   const closeSidebar = () => {
-    setsidebarOpen(false)
-  }
+    setsidebarOpen(false);
+  };
 
   return (
-    <div className='containers'>
-      <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+    <div className="containers">
+      <h1>Waiting for parment to start</h1>
+      {/* <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} /> */}
       <Main />
     </div>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

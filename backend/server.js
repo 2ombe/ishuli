@@ -13,6 +13,7 @@ import studentRoutes from "./routes/studentRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import teacherRoutes from "./routes/teacherRoutes.js";
 import staffRoutes from "./routes/staffRoutes.js";
+import uploadRouter from "./routes/uploadRoute.js";
 // const items = require('./data/Data')
 // const classes = require('./data/ClassData')
 // d0t
@@ -31,6 +32,7 @@ app.use("/api/students", studentRoutes);
 app.use("/api/login", adminRoutes);
 app.use("/api/teachers", teacherRoutes);
 app.use("/api/staffs", staffRoutes);
+app.use("api/upload", uploadRouter);
 app.get("/api/config/cloudinary", (req, res) => {
   res.send(process.env.CLOUDINARY_URL);
 });
